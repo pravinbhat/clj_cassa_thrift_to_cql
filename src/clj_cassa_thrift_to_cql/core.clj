@@ -1,7 +1,9 @@
-(ns clj-cassa-thrift-to-cql.core
+(ns clj-cassa-thrift-to-cql.core 
+  (:import (cathy App))
   (:gen-class))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+(defn -main[& args]
+  (println "Hello, from the outside World of Clojure!")
+  (let [app (new App)]
+    (.hello app))
+)
